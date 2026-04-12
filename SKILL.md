@@ -1,11 +1,19 @@
 ---
 name: create-viral-content
-description: |
+description: "Create viral content for social media: Reddit posts, Twitter threads, LinkedIn, YouTube, TikTok, blogs. Use when: user wants content to go viral, be engaging, attention-grabbing, or generate engagement."
   AUTOMATIC ACTIVATION: Use this skill whenever generating content for social media platforms including Reddit posts, Twitter/X threads, LinkedIn posts, YouTube videos/comments, TikTok scripts, Instagram posts/reels, email subject lines, blog titles, or any content intended for public engagement. Also triggers on: "make this viral", "social media post", "catchy headline", "hook", "engagement", "shareable", "go viral", "attention-grabbing", "clickable", "scroll-stopping", "title ideas", "hot take", "more engaging", "subreddit", "thread". Apply to any AI-generated content facing public audience or hostile perception.
 license: MIT
 metadata:
   author: ice-ninja
   version: "2.1"
+inputs:
+  - name: content_brief
+    description: Topic, platform, and target audience for viral content
+    pointer_type: parameter
+outputs:
+  - name: viral_content
+    description: Optimized social media content for the target platform
+    pointer_type: output_file
 ---
 
 > ⚠️ **BEFORE USING THIS SKILL:** Review all files in the `resources/` directory. These contain AI tell catalogs, platform templates, refinement protocols, and 40-source research basis required for proper skill execution.
@@ -416,3 +424,16 @@ Flip the order and you're always playing defense. Two inbox windows:
 - Used contractions ("I", "you're", "That's")
 - Varied sentence length (4 words to 15 words)
 - Strong conviction opener instead of hedged announcement
+## 📎 Resources
+
+📎 `~/code/agents/skills/create-viral-content/README.md`
+📎 `~/code/agents/skills/create-viral-content/marketplace.json`
+📎 `~/code/agents/skills/create-viral-content/resources/ai-tells.md`
+📎 `~/code/agents/skills/create-viral-content/resources/humanize-integration.md`
+📎 `~/code/agents/skills/create-viral-content/resources/platform-templates.md`
+📎 `~/code/agents/skills/create-viral-content/resources/refinement-protocol.md`
+📎 `~/code/agents/skills/create-viral-content/resources/research-statistics.md`
+📎 `~/code/agents/skills/create-viral-content/resources/thumbnail-checklist.md`
+📎 `~/code/agents/skills/create-viral-content/resources/title-formulas.md`
+📎 `~/code/agents/skills/create-viral-content/resources/viral-thumbnails.md`
+📎 `~/code/agents/skills/create-viral-content/resources/viral-titles.md`
