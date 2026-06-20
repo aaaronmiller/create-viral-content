@@ -19,7 +19,7 @@ A production-ready system for creating viral social content across all major pla
 | marketplace.json | ~1 KB | Anthropic marketplace manifest |
 | VALIDATION-REPORT.md | ~15 KB | 10-persona adversarial validation |
 
-### Resources (`resources/` folder)
+### References (`references/` folder)
 
 | File | Purpose |
 |------|---------|
@@ -47,7 +47,7 @@ A production-ready system for creating viral social content across all major pla
 **Claude.ai:**
 1. Create new Project
 2. Upload `SKILL.md` to Project Knowledge
-3. Optionally add resource files
+3. Optionally add reference files
 
 ### Basic Usage
 
