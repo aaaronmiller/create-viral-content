@@ -136,10 +136,10 @@ Generate a "Strategy Brief" with findings:
 
 If patterns emerge that aren't covered in the main SKILL.md:
 
-- Add new hook patterns to `resources/title-formulas.md`
-- Add new AI tells to `resources/ai-tells.md`
+- Add new hook patterns to `references/title-formulas.md`
+- Add new AI tells to `references/ai-tells.md`
 - Update platform calibration in the main body
-- Add new research findings to `resources/research-statistics.md`
+- Add new research findings to `references/research-statistics.md`
 
 ## Quick-Start: First-Time Setup
 

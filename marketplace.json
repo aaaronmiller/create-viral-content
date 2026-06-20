@@ -39,17 +39,17 @@
     "resources": [
         {
             "name": "ai-tells",
-            "source": "./resources/ai-tells.md",
+            "source": "./references/ai-tells.md",
             "description": "AI detection guide with human alternatives"
         },
         {
             "name": "platform-templates",
-            "source": "./resources/platform-templates.md",
+            "source": "./references/platform-templates.md",
             "description": "Platform-specific content templates"
         },
         {
             "name": "refinement-protocol",
-            "source": "./resources/refinement-protocol.md",
+            "source": "./references/refinement-protocol.md",
             "description": "Adversarial refinement passes"
         }
     ]
