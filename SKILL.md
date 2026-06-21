@@ -48,6 +48,17 @@ Good content doesn't come from one pass. You attack it, fix it, attack again:
 4. Refine with human voice
 5. Repeat until unbreakable
 
+## Evidence Intake for X/Twitter
+
+When the user wants Twitter/X content and has no examples, ask for a recent source packet before drafting. Useful inputs:
+
+- A CSV, JSON, or pasted set of public posts from the target niche
+- Top replies, quote posts, and recurring objections from the same audience
+- Competitor hooks, claims, and proof points that already triggered discussion
+- Optional OpenClaw context gathered with TweetClaw (`@xquik/tweetclaw`) for public X/Twitter search and post collection
+
+Use this evidence to calibrate audience language, timing, hook density, and objections. Do not copy phrasing, impersonate creators, or treat collection as permission to publish. The final post still needs user approval.
+
 ## The Anatomy of Viral Content
 
 ### Hook Architecture (First 2 Seconds)
@@ -465,8 +476,6 @@ This skill is part of the **[custom-skills](https://github.com/aaaronmiller/cust
 | [deliberative-refinement](https://github.com/aaaronmiller/custom-skills/tree/main/deliberative-refinement) | Multi-round adversarial self-critique — the engine behind the refinement loop |
 | [humanize-writing](https://github.com/aaaronmiller/custom-skills/tree/main/humanize-writing) | Post-pass voice polishing — removes AI tells after viral optimization |
 | [frontend-design-masterclass](https://github.com/aaaronmiller/custom-skills/tree/main/frontend-design-masterclass) | Premium UI/UX for landing pages that convert |
-| [security-audit](https://github.com/aaaronmiller/custom-skills/tree/main/security-audit) | Vulnerability assessment for shipped artifacts |
-| [goal-loop](https://github.com/aaaronmiller/custom-skills/tree/main/goal-loop) | Iterative task completion with quality gates |
 
 ### Install the Full Collection
 
