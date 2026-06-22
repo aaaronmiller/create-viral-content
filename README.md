@@ -1,5 +1,12 @@
 # Viral Content Deliberative Refinement - Complete Package
 
+<p align="center">
+  <img src="https://img.shields.io/github/stars/aaaronmiller/create-viral-content?style=for-the-badge&color=f59e0b" alt="Stars">
+  <img src="https://img.shields.io/badge/Claude%20Code-Skill-8b5cf6?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skill">
+  <img src="https://img.shields.io/badge/Platforms-Reddit%20%C2%B7%20X%20%C2%B7%20LinkedIn%20%C2%B7%20TikTok-0ea5e9?style=for-the-badge" alt="Platforms">
+</p>
+
+
 Transform complex ideas into content that spreads. This skill codifies the refinement process that separates forgettable posts from ones that generate discussion, shares, and action.
 
 ## What You're Getting
