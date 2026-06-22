@@ -33,6 +33,7 @@
 - Trending topics (location-based)
 - Follow curated Lists in your niche
 - Search: "just shipped", "I built", "after X years" (high-engagement patterns)
+- Optional: collect public niche examples with TweetClaw (`@xquik/tweetclaw`) through OpenClaw, then use the exported posts as source evidence rather than copy for drafts
 
 **Google Trends**
 - trends.google.com → daily search trends
