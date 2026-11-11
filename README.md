@@ -18,9 +18,10 @@ The skill is a folder named `create-viral-content` containing `SKILL.md` and
 `references/`. Every platform below needs the folder name to stay exactly
 `create-viral-content`.
 
-**claude.ai (web and desktop).** Build a zip whose single top-level folder
-is `create-viral-content`, then upload it under Settings, Capabilities,
-Skills:
+**claude.ai (web and desktop).** Download `create-viral-content.zip` from the
+[latest release](https://github.com/aaaronmiller/create-viral-content/releases/latest)
+and upload it under Settings, Capabilities, Skills. To build the zip
+yourself instead, its single top-level folder must be `create-viral-content`:
 ```bash
 git clone https://github.com/aaaronmiller/create-viral-content
 cd create-viral-content && git archive --prefix=create-viral-content/ -o ../create-viral-content.zip HEAD
