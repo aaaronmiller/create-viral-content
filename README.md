@@ -18,11 +18,15 @@ The skill is a folder named `create-viral-content` containing `SKILL.md` and
 `references/`. Every platform below needs the folder name to stay exactly
 `create-viral-content`.
 
-**claude.ai (web and desktop).** Download `create-viral-content.zip` from the
-[latest release](https://github.com/aaaronmiller/create-viral-content/releases/latest)
-and upload it under Settings, Capabilities, Skills. Do not upload GitHub's
-"Download ZIP" archive: it wraps the files in `create-viral-content-main/`,
-and the folder name must match the skill name.
+**claude.ai (web and desktop).** Build a zip whose single top-level folder
+is `create-viral-content`, then upload it under Settings, Capabilities,
+Skills:
+```bash
+git clone https://github.com/aaaronmiller/create-viral-content
+cd create-viral-content && git archive --prefix=create-viral-content/ -o ../create-viral-content.zip HEAD
+```
+Do not upload GitHub's "Download ZIP" archive: it wraps the files in
+`create-viral-content-main/`, and the folder name must match the skill name.
 
 **Claude Code.**
 ```bash
@@ -37,7 +41,7 @@ git clone https://github.com/aaaronmiller/create-viral-content ~/.agents/skills/
 
 **Antigravity:** clone into `~/.gemini/config/skills/create-viral-content`.
 
-**Claude API and OpenAI API:** upload the release zip as a skill bundle.
+**Claude API and OpenAI API:** upload the same zip as a skill bundle.
 
 ## Use
 
