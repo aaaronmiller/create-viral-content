@@ -1,5 +1,18 @@
 # Title Formulas Library
 
+## Contents
+
+- [Curiosity-Gap Formulas](#curiosity-gap-formulas)
+- [Contrarian Formulas](#contrarian-formulas)
+- [Listicle Formulas](#listicle-formulas)
+- [How-To Formulas](#how-to-formulas)
+- [Question Formulas](#question-formulas)
+- [Comparison Formulas](#comparison-formulas)
+- [Prediction Formulas](#prediction-formulas)
+- [Problem/Solution Formulas](#problemsolution-formulas)
+- [Negative/Loss Aversion Formulas](#negativeloss-aversion-formulas)
+- [Platform-Specific Adaptations](#platform-specific-adaptations)
+
 > 50+ proven title formulas organized by category with examples and platform notes.
 
 ---

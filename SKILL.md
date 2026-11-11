@@ -1,478 +1,257 @@
 ---
 name: create-viral-content
-description: "Create viral content for social media: Reddit posts, Twitter threads, LinkedIn, YouTube, TikTok, blogs. Use when: user wants content to go viral, be engaging, attention-grabbing, or generate engagement."
-  AUTOMATIC ACTIVATION: Use this skill whenever generating content for social media platforms including Reddit posts, Twitter/X threads, LinkedIn posts, YouTube videos/comments, TikTok scripts, Instagram posts/reels, email subject lines, blog titles, or any content intended for public engagement. Also triggers on: "make this viral", "social media post", "catchy headline", "hook", "engagement", "shareable", "go viral", "attention-grabbing", "clickable", "scroll-stopping", "title ideas", "hot take", "more engaging", "subreddit", "thread". Apply to any AI-generated content facing public audience or hostile perception.
+description: "Create and refine viral social content: Reddit posts, X threads, LinkedIn posts, YouTube titles and thumbnails, TikTok and Reels scripts, Instagram carousels, Threads and Bluesky posts, email subject lines and blog headlines. Use when the user wants content to spread, earn engagement, or read as human to a skeptical audience, and whenever drafting any public-facing post, hook, title or caption even if the word viral never appears. Triggers: 'make this viral', 'social media post', 'catchy headline', 'hook', 'title ideas', 'thumbnail', 'engagement', 'shareable', 'go viral', 'attention-grabbing', 'scroll-stopping', 'hot take', 'more engaging', 'subreddit', 'thread', 'sounds like AI', 'AI slop'. Covers 2026 platform ranking changes, current AI-tell removal and AI-disclosure rules."
 license: MIT
 metadata:
   author: ice-ninja
-  version: "2.1"
-inputs:
-  - name: content_brief
-    description: Topic, platform, and target audience for viral content
-    pointer_type: parameter
-outputs:
-  - name: viral_content
-    description: Optimized social media content for the target platform
-    pointer_type: output_file
-tags:
-- social
-- writing
-grade: A
-source: community
+  version: "3.0.0"
+  updated: "2026-11-10"
+  tags: "social, writing, marketing, ai-tells"
 ---
-
-> ⚠️ **BEFORE USING THIS SKILL:** Review all files in the `references/` directory. These contain AI tell catalogs, platform templates, refinement protocols, and 40-source research basis required for proper skill execution.
-
-## Research Basis
-
-This skill synthesizes findings from 40 documented research sources:
-- **BuzzSumo:** 100M headlines study → optimal length is 11 words/65 characters
-- **Outbrain:** Negative superlatives outperform positive by 63%
-- **Netflix:** 82% of browsing time on thumbnails, 1.8s decision window
-- **Face Psychology:** +35-50% CTR with faces in thumbnails
-- **A/B Testing Research:** 30-40% CTR improvement over time
-
-Full statistics in `references/research-statistics.md`.
 
 # Create Viral Content
 
-Make your posts spread. This skill turns forgettable drafts into content that gets shares, comments, and action.
+Turn a draft or a brief into a post that earns shares, comments and action,
+and that reads as written by a person with a point of view.
 
-## Core Principle: The Deliberative Refinement Loop
+## Contents
 
-Good content doesn't come from one pass. You attack it, fix it, attack again:
+- [Workflow](#workflow)
+- [What platforms reward in 2026](#what-platforms-reward-in-2026)
+- [Hooks, body and closer](#hooks-body-and-closer)
+- [Platform rules](#platform-rules)
+- [Titles and thumbnails](#titles-and-thumbnails)
+- [AI tells: the top five](#ai-tells-the-top-five)
+- [Refinement passes](#refinement-passes)
+- [Ethics and disclosure](#ethics-and-disclosure)
+- [Example](#example)
+- [Reference files](#reference-files)
 
-1. Generate initial draft
-2. Attack it from audience perspectives
-3. Identify AI tells and weak points
-4. Refine with human voice
-5. Repeat until unbreakable
+## Workflow
 
-## The Anatomy of Viral Content
+Run these steps in order for every request. Skip a step only when the
+request makes it irrelevant (for example, no thumbnail for a Reddit post).
 
-### Hook Architecture (First 2 Seconds)
+1. **Pin the brief.** Identify platform, audience, goal and the author's own
+   stake: a claim, a number, an event or an experience only they have. If
+   none is given, ask for one; without it, platforms now classify the post
+   as slop.
+2. **Check platform rules.** Read the platform section below and, for
+   LinkedIn, X, YouTube, Instagram, Threads, Reddit or email, the matching
+   section of `references/platform-updates-2026.md`. For Reddit, check the
+   target subreddit's AI rule first.
+3. **Draft the hook.** Generate at least five hooks from the patterns below
+   and pick the strongest by the title score.
+4. **Draft the body and closer** using the structure below and the matching
+   template in `references/platform-templates.md`.
+5. **Remove AI tells.** Apply the top five below, then scan against the
+   "Current-Model Tells (2026)" table in `references/ai-tells.md`.
+6. **Run the refinement passes.** Attack the draft from five perspectives
+   and revise after each.
+7. **Package.** For video, write two or three title and thumbnail variants
+   that make different promises (YouTube tests pick by watch time).
+8. **Check disclosure.** Apply the disclosure rules below before handing
+   the draft back, and say which one applies.
 
-**Pattern: Prediction + Stakes**
-```
-"I think [CONCEPT] is the [YEAR] [CATEGORY] that [OUTCOME]."
-```
-Example: "I think deliberative refinement is the 2026 prompt technique that matters most."
+Deliver the final draft, the alternates considered, and one line on why the
+chosen hook wins.
 
-**Why it works:**
-- "I think" = personal conviction, not corporate announcement
-- Year = creates FOMO and timeframe
-- Category = helps reader self-identify
-- Outcome = stakes that matter
+## What platforms reward in 2026
 
-**Pattern: Tribal Identity Split**
-```
-"[TECHNIQUE] separates [WINNERS] from [EVERYONE ELSE]."
-```
-Example: "This separates serious builders from prompt tourists."
+These changes override older advice. Details and sources:
+`references/platform-updates-2026.md`.
 
-**Why it works:**
-- Creates in-group/out-group
-- Reader immediately picks a side
-- Ego investment drives engagement
+- **Perspective beats polish.** LinkedIn's slop classifiers (from
+  2026-07-30) cut out-of-network reach for fluent posts with no identifiable
+  stance; classified slop gets about 40% fewer views.
+- **Keyword-comment bait is dead.** "Comment GUIDE and I'll DM you" lost
+  about half its LinkedIn reach from 2026-07-27. A plain question is fine.
+- **Links cost reach.** About 16-21% on LinkedIn, including "link in the
+  comments"; near-zero median engagement for non-Premium link posts on X.
+  Put substance first and the link last, or in a reply.
+- **Originality is enforced on video.** YouTube demonetizes templated AI
+  content and AI personas on health or finance; Shorts cuts reach for
+  re-uploads, and narrating someone else's footage does not count.
+- **Mutuals and communities win replies.** X boosts mutual-follow replies;
+  Bluesky ranks replies by social proximity; Threads reports which
+  community drove each post.
+- **Posting time barely matters on LinkedIn** (±2% of final reach). Do not
+  spend effort on it.
 
-**Pattern: Before/After Compression**
-```
-"What used to require [OLD COMPLEXITY] now [NEW SIMPLICITY]."
-```
-Example: "What used to need 12 models chained together now takes one."
+## Hooks, body and closer
 
-**Why it works:**
-- Concrete efficiency gain
-- "I had no idea" response
-- Shareable stat
+### Hook (first line, first two seconds)
 
-### Body Structure: The Build
+Pick one pattern and fill it with the author's real material.
 
-**Required elements (in order):**
-1. WHAT - Explain the concept (1-2 sentences max)
-2. HOW - The mechanic with concrete examples
-3. WHY NOW - The breakthrough that makes it possible
-4. PAYOFF - What you can actually build/achieve
+- **Prediction + stakes:** "I think [concept] is the [year] [category] that
+  [outcome]." A personal conviction, a timeframe and a consequence.
+- **Tribal split:** "[Technique] separates [group] from [everyone else]."
+  The reader picks a side.
+- **Before/after compression:** "What used to take [old cost] now takes
+  [new cost]." A concrete, shareable gain.
+- **Specific result:** "I tried [thing] for [time]. [Number] changed." The
+  number must be real.
 
-**Anti-patterns to avoid:**
-- Starting with "why it matters" before explaining "what it is"
-- Generic benefits without specific mechanics
-- Selling the sizzle before showing the steak
+### Body
 
-### Closer Architecture (Last 10%)
+Order: **what** it is (one or two sentences), **how** it works with a
+concrete example, **why now**, then the **payoff** the reader can use.
+Explain the thing before arguing why it matters. Give at least one concrete
+example per abstract claim.
 
-**Pattern: Command, Not Request**
-```
-BAD: "Try it. Change my mind."  (beggy, engagement bait)
-GOOD: "Your next [ACTION] shouldn't [OLD WAY]. It should [NEW WAY]."
-```
-Example: "Your next prompt shouldn't ask for an answer. It should demand: 'Attack this from three expert perspectives, ground your claims, then revise.'"
+### Closer (last 10%)
 
-**Why the command works:**
-- Ends on authority, not weakness
-- Gives immediate actionable next step
-- Mirrors the thesis in its structure
-
-## AI Tell Detection and Elimination
-
-Kill these on sight:
-
-### Transition Tells
-- ❌ "Here's the wild part:"
-- ❌ "Here's the thing:"
-- ❌ "Let's dive in"
-- ❌ "But here's the kicker:"
-- ✅ Direct statement with no transition needed
-
-### Enthusiasm Tells
-- ❌ "I'm excited to share"
-- ❌ "This is a game-changer"
-- ❌ "Revolutionary"
-- ✅ Let the content create excitement
-
-### Structure Tells
-- ❌ Numbered lists for everything
-- ❌ "First... Second... Finally..."
-- ❌ "In conclusion"
-- ✅ Prose that flows naturally
-
-### Engagement Bait Tells
-- ❌ "Change my mind"
-- ❌ "What do you think?"
-- ❌ "Let me know in the comments"
-- ✅ Strong closer that doesn't ask for permission
-
-### Corporate Speaks
-- ❌ "Leverage"
-- ❌ "Utilize"  
-- ❌ "Implement solutions"
-- ✅ Plain verbs: use, try, build, ship
-
-### Punctuation Tells (2024-2025)
-- ❌ Em-dash overuse — like this — everywhere (max 1 per 500 words)
-- ❌ Paragraphs starting with "However," "Moreover," "Overall,"
-- ❌ Pleonasms: "true fact," "end result," "close proximity"
-- ❌ Tautologies: "collaborate together," "revert back"
-- ❌ Uniform sentence lengths (all 15-18 words)
-- ✅ Vary punctuation, sentence length, and structure
-
-## Platform-Specific Optimization
-
-### Reddit
-**Title patterns that work:**
-- Hot Take: [Contrarian Position]
-- [Technique]: Why [Common Practice] is dead in [YEAR]
-- The [category] technique that [concrete result]
-- Stop [old behavior]. [New behavior] is the [year] meta.
-
-**Body guidelines:**
-- 200-400 words optimal
-- Use bold for section headers sparingly
-- End with TL;DR that's actually quotable
-- Don't ask "what do you think?" - invite specific discussion
-
-**Subreddit calibration:**
-- r/MachineLearning: Technical, invite discussion, conservative claims
-- r/ChatGPT: Practical, show the meta shift, power-user focus
-- r/singularity: Hype-friendly, maximum viral coefficient
-- r/LocalLLaMA: Add self-hosting angle
-- Hacker News: "Show HN:" format, understate rather than overstate
-
-### YouTube Comments
-**Constraints:** ~500 chars, must hook in first line, no formatting
-**Pattern:**
-```
-[Bold claim in first sentence]. [Mechanic in 2 sentences]. [Why now]. [Call to action or quotable closer].
-```
-
-### Twitter/X Threads
-**Thread structure:**
-1. Hook tweet (standalone viral potential)
-2. "Here's how:" transition
-3. 3-5 mechanic tweets
-4. Payoff/result tweet
-5. Call-to-action tweet
-
-**Per-tweet rules:**
-- Each tweet must standalone
-- No "1/" numbering (algorithmic penalty)
-- Use line breaks for readability
-- End threads with something quotable
-
-### LinkedIn
-**Patterns that perform:**
-- Personal story + professional lesson
-- "Unpopular opinion:" framing
-- Contrarian take on industry norm
-- Before/after transformation
-
-**Avoid:**
-- Pure promotional content
-- Asking for engagement explicitly
-- Hashtag stuffing
-
-### TikTok
-**Hook constraints:** 1-3 seconds to capture, sound-off viewing common
-
-**High-performing hooks:**
-- Curiosity: "Most people don't know [surprising fact]..."
-- Problem: "If you struggle with [problem], watch this..."
-- Result: "I tried [thing] for [time]. Here's what happened..."
-- Controversy: "This is why everyone is wrong about [topic]..."
-
-**Caption optimization:**
-- Keywords in first 3 words
-- 5-10 words optimal
-- Hashtags at end, not stuffed
-
-### Instagram Reels
-**Constraints:** Vertical 9:16, auto-play, first frame critical
-
-**Thumbnail (cover) matters less than:**
-- First frame visual hook
-- Text overlay in first 2 seconds
-- Pattern interrupt opening
-
-**Carousel posts:**
-- First slide: Hook with curiosity gap
-- Middle slides: Value delivery
-- Last slide: Quotable statement or CTA
-
-### Email Subject Lines
-**Optimal length:** 30-50 characters (mobile-first)
-
-**High-performing patterns:**
-- Curiosity: "Is this why your [metric] is stuck?"
-- Personal: "[Name], noticed you haven't tried this"
-- Value: "Get 2x [outcome] with one tweak"
-
-**Anti-patterns:**
-- ❌ ALL CAPS urgency
-- ❌ "Quick question" (when it's not)
-- ❌ Emoji overload 🚀🔥💡
-
-## The Humanization Pass
-
-Done with structure? Run **humanize-writing** to polish the voice. Same viral hooks, human delivery.
-
-### Automatic Integration
-
-If you've got both skills, call humanize-writing directly:
+End on a statement, not a request:
 
 ```
-Apply the humanize-writing skill to this draft. Focus on:
-- Removing AI vocabulary tells from the content
-- Ensuring natural sentence rhythm 
-- Maintaining the viral hooks I've established
+BAD:  "Try it. Change my mind."  /  "Comment GUIDE and I'll send it."
+GOOD: "Your next [action] shouldn't [old way]. It should [new way]."
 ```
 
-### Manual Humanization Checklist
+A specific question that invites a real answer is acceptable; generic
+"what do you think?" is not.
 
-No humanize-writing? Run this instead:
+## Platform rules
 
-1. **Read aloud test**: Does it sound like a human talking to a friend at a bar?
-2. **Transition audit**: Remove every "Here's the thing" type phrase
-3. **Enthusiasm check**: Delete excitement language, keep exciting content
-4. **Specificity check**: Replace every generic noun with a concrete example
-5. **Length check**: Cut 20% - viral content is always shorter than the draft
+| Platform | Length | Do | Avoid |
+|---|---|---|---|
+| Reddit | 200-400 words | Casual-expert voice, quotable TL;DR, match the subreddit (r/MachineLearning: conservative claims; r/LocalLLaMA: self-hosting angle) | AI-sounding replies (98% of replies are human-written, so tells stand out), posting before reading the subreddit's AI rule |
+| Hacker News | Short | "Show HN:" format, understate | Hype words |
+| X | under 280 chars per post | Standalone hook post, substance before link, replies inside the author's niche | "1/" numbering, bare link posts |
+| LinkedIn | 150-300 words | First-person claim or lived detail, plain-question or statement closer | Keyword-comment CTAs, link in post or comments when reach matters, hashtag stuffing |
+| YouTube comment | about 500 chars | Bold claim first, mechanic in two sentences, quotable closer | Formatting |
+| TikTok | Caption 5-10 words | Keyword in the first three words, hook in 1-3 seconds, sound-off friendly text | Unlabeled realistic AI visuals |
+| Instagram Reels | Text overlay in 2 s | First-frame hook, optimize for sends to a friend; Reels may trail a long video | Watermarked reposts, minor-crop reposts |
+| Carousel | 5-10 slides | Slide 1 curiosity gap, middle slides deliver, last slide quotable | Assuming carousels still beat photos (the lead shrank to about 9%) |
+| Threads | Short | First line written as a headline (posts appear in Google Discover), UTM links | Relying on native link stats (removed) |
+| Email subject | 30-50 chars | Personalized curiosity; pitch in preheader and first sentence because AI inbox summaries read them | ALL CAPS urgency, fake "quick question", emoji overload |
 
-### Platform-Specific Humanization Calibration
+Full templates: `references/platform-templates.md`. Adapting one piece to
+several platforms: `references/cross-platform-adaptation.md`.
 
-| Platform | Humanization Level | Formality Target |
-|----------|-------------------|------------------|
-| Reddit | High | Casual expert |
-| LinkedIn | Medium | Professional but warm |
-| Twitter/X | Medium-High | Punchy, fragmentary OK |
-| YouTube | High | Accessible, conversational |
-| Hacker News | Medium | Technical, understated |
+## Titles and thumbnails
 
-### Quantitative Thresholds for Viral Content
+Titles decide most of a video's or article's performance. Generate 25 or
+more, then score each 0-3 on curiosity, specificity and emotion; ship only
+7 or above.
 
-Check these numbers after humanizing:
+- **Length:** for text headlines, about 11 words or 65 characters still
+  works. For YouTube, 2026 data (507k videos) shows longer, specific titles
+  break out more (over 75 characters: 35.9% vs under 30: 26.1%).
+- **Numbers:** specific beats round ($1,247 over $1,000); odd beats even.
+- **Negative superlatives** outperform positive ones on clicks; use them
+  only when true.
+- **Thumbnail:** a face with a calm or neutral expression (shocked faces are
+  only 5-11% of 2026 breakouts), 4-6 words that add to the title rather than
+  repeat it, at most three elements, legible at 120 px wide.
+- **Variants:** make each variant a different promise the video keeps.
 
-- **Hook strength**: First sentence must create curiosity or stakes
-- **AI tells**: Zero tolerance for blacklisted phrases (see `references/ai-tells.md`)
-- **Word count**: Platform-specific (Reddit: 200-400, Twitter: <280 per tweet)
-- **Specificity ratio**: ≥1 concrete example per abstract claim
-- **Closer strength**: Must end on authority, not request
+Formulas and scoring: `references/viral-titles.md`,
+`references/title-formulas.md`. Thumbnail design:
+`references/viral-thumbnails.md`, `references/thumbnail-checklist.md`.
 
-## Ethical Framework
+## AI tells: the top five
 
-### Legitimate Uses
-- Optimizing your own content for maximum social reach
-- Improving engagement for genuine value propositions
-- Learning viral content mechanics for personal skill development
-- Making AI-generated content pass hostile audience scrutiny
+Current models dropped the famous tells (em dashes fell 99% in Opus 5.5), so
+check for these first. Score clusters, not single hits.
 
-### Illegitimate Uses
-- Astroturfing or coordinated inauthentic behavior
-- Spreading misinformation with viral mechanics
-- Impersonating others' expertise or voice
-- Engagement farming without substance
+1. **Importance flagging:** "this matters", "why X matters", "matters most".
+2. **"More than" contrast:** "is more than a X, it...", "rather than
+   simply", "not only... but also".
+3. **Forward-looking transitions:** "looking ahead", "adds another layer",
+   "in practice", "here's the thing".
+4. **Enthusiasm and helpfulness:** "excited to share", "game-changer",
+   "can help you", "makes it easier", "genuinely".
+5. **Perspective-free polish:** fluent sentences of uniform length with no
+   stance, number or lived detail. Fix it by adding the author's own claim
+   and varying sentence length.
 
-### Disclosure Guidance
-- **Required**: When promoting products/services you're paid for
-- **Recommended**: When AI assisted in content generation
-- **Not required**: For general content creation and ideation
+Complete catalog with older tells, platform-specific tells and video and
+thumbnail tells: `references/ai-tells.md`. For a voice polish pass, use the
+humanize-writing skill if installed (`references/humanize-integration.md`).
 
-## Voice Calibration
+Never promise that a rewrite evades AI detectors; detector vendors now
+target "humanized" text. Substance and the author's real voice are what
+both readers and platform classifiers reward.
 
-**Match formality to platform:**
-- Reddit: Casual expert (bar conversation with someone smart)
-- LinkedIn: Professional but not corporate
-- Twitter: Punchy, fragmentary ok
-- YouTube: Accessible, can be slightly more casual
+## Refinement passes
 
-**Confidence calibration:**
-- Overconfident = gets attacked in comments
-- Underconfident = doesn't spread
-- Target: Strong conviction + specific evidence
+Attack the draft once per pass and revise before the next. Details and
+thumbnail-specific passes: `references/refinement-protocol.md`.
 
-## Title Generation
+1. **Skeptic:** Why should I care? What is actually new?
+2. **Expert:** Is every claim accurate? What would an expert nitpick?
+3. **Scroller:** Would I stop for this first line?
+4. **Competitor:** How is this different from the last ten similar posts?
+5. **Editor:** What can go without losing meaning? Cut about 20%.
 
-> ⚠️ **CRITICAL:** Titles determine 70% of content performance. Consult `references/viral-titles.md` and `references/title-formulas.md` for 50+ formulas.
+Stop when a full pass produces no change.
 
-### Research-Backed Title Rules
-- **Optimal length:** 11 words / 65 characters (BuzzSumo 100M study)
-- **Magic number:** 10 performs best; odd numbers beat even
-- **Negative superlatives:** +63% CTR vs positive (Outbrain)
-- **Specific numbers:** $1,247 beats $1,000
+## Ethics and disclosure
 
-### Quick Formulas (Generate 25+, Pick Best)
+Use this skill to sharpen the author's own ideas. Refuse astroturfing,
+coordinated inauthentic behavior, misinformation, impersonation, fake
+reviews or testimonials, and invented personal experiences.
 
-**Curiosity-Gap:** "What [group] won't tell you about [topic]"
-**Contrarian:** "[Common belief] is dead. Here's what's next."
-**Listicle:** "[Number] ways to [achieve X] without [sacrifice]"
-**How-To:** "How to [achieve X] in [timeframe] (step-by-step)"
-**Prediction:** "[Concept] is the [year] [category] that [outcome]"
-**Negative:** "[Number] [topic] mistakes destroying your [metric]"
+Disclosure, as of November 2026:
 
-### Title Scoring (Target: 7+)
-| Criteria | Score 0-3 |
-|----------|-----------|
-| Curiosity | "Must know" feeling? |
-| Specificity | Numbers, metrics? |
-| Emotion | High-arousal trigger? |
+- **Paid or sponsored content:** always disclose.
+- **EU audiences, public-interest topics** (politics, health, economics):
+  EU AI Act Article 50 applies from 2026-08-02. Either a named person edits
+  substantively and takes editorial responsibility, or the post carries an
+  AI label.
+- **Realistic AI images, audio or video:** label them (YouTube, TikTok,
+  India, South Korea; New York for ads with synthetic performers).
+- **LinkedIn:** disclose substantial AI involvement when it is not apparent.
+- **Reddit:** follow the subreddit's rule.
 
-## Thumbnail Design
+State in the hand-back which rule applies. Full table:
+`references/platform-updates-2026.md`.
 
-> ⚠️ **CRITICAL:** Thumbnails drive 70%+ of video performance. Consult `references/viral-thumbnails.md` and `references/thumbnail-checklist.md` for design protocols.
+## Example
 
-### Research-Backed Thumbnail Rules
-- **Face CTR boost:** +35-50% (neuroscience: amygdala activation)
-- **Decision time:** 1.8 seconds average (Netflix study)
-- **82%** of browsing time spent on thumbnails
-- **Custom thumbnails:** 90% of top videos use them
+**Before (reads as AI):**
 
-### Quick Checklist
-- [ ] Face with clear expression (shock/surprise = highest CTR)
-- [ ] Maximum 3 elements in frame ("Limit Your Lamborghinis")
-- [ ] High contrast colors (test in dark mode)
-- [ ] Text: 3-4 words max, bold sans-serif
-- [ ] Mobile test (legible at 120px width)
-- [ ] Title synergy (complement, don't duplicate)
-
-### AI Thumbnail Prompt
 ```
-[person] with [shocked/surprised] expression, close-up portrait,
-[vibrant color] background, studio lighting, high contrast,
-YouTube thumbnail style, clean composition, no text
-```
-
-## Refinement Protocol
-
-Before you ship, attack the draft:
-
-**Pass 1: The Skeptic**
-"Why should I care? What's actually new here?"
-
-**Pass 2: The Expert**  
-"Is this technically accurate? What would an expert nitpick?"
-
-**Pass 3: The Scroller**
-"Would I stop scrolling for this? What's the hook?"
-
-**Pass 4: The Competitor**
-"How is this different from the 10 similar posts?"
-
-**Pass 5: The Editor**
-"What can I cut without losing meaning?"
-
-## Examples
-
-### Bad → Good Transformation
-
-**Before (AI-generated feel):**
-```
-I'm excited to share a revolutionary new productivity hack that will 
-change your workflow forever. Here's the thing: most people waste hours 
-on email. Let's dive into how inbox zero can transform your day. First, 
-you batch process. Second, you use templates. Finally, you schedule 
-check-ins. What do you think?
+I'm excited to share a revolutionary productivity hack that will change
+your workflow forever. Here's the thing: most people waste hours on email.
+Let's dive into how inbox zero can transform your day. First, batch
+process. Second, use templates. Finally, schedule check-ins. What do you
+think?
 ```
 
-**After (human voice):**
+**After (human, specific):**
+
 ```
-Email before noon is self-sabotage. Tested this for 3 weeks. No inbox 
-until 2pm. My deep work hours went from 2 to 4+. That 7:47am Slack 
-ping? Not your fire. Morning brain builds. Afternoon brain reacts. 
-Flip the order and you're always playing defense. Two inbox windows: 
-2pm and 5pm. Handles everything that actually matters.
-```
-
-**What changed:**
-- Removed enthusiasm tells ("excited to share", "revolutionary")
-- Removed transition tells ("Here's the thing", "Let's dive in")
-- Removed structure tells ("First... Second... Finally...")
-- Removed engagement bait ("What do you think?")
-- Added concrete metrics (3 weeks, 2 to 4+ hours, 7:47am)
-- Used contractions ("I", "you're", "That's")
-- Varied sentence length (4 words to 15 words)
-- Strong conviction opener instead of hedged announcement
-## 📎 Resources
-
-📎 `~/code/agents/skills/create-viral-content/README.md`
-📎 `~/code/agents/skills/create-viral-content/marketplace.json`
-📎 `~/code/agents/skills/create-viral-content/references/ai-tells.md`
-📎 `~/code/agents/skills/create-viral-content/references/humanize-integration.md`
-📎 `~/code/agents/skills/create-viral-content/references/platform-templates.md`
-📎 `~/code/agents/skills/create-viral-content/references/refinement-protocol.md`
-📎 `~/code/agents/skills/create-viral-content/references/research-statistics.md`
-📎 `~/code/agents/skills/create-viral-content/references/thumbnail-checklist.md`
-📎 `~/code/agents/skills/create-viral-content/references/title-formulas.md`
-📎 `~/code/agents/skills/create-viral-content/references/viral-thumbnails.md`
-📎 `~/code/agents/skills/create-viral-content/references/viral-titles.md`
-
-### Progressive-Disclosure Resources (load only when needed)
-
-> These resources are NOT loaded automatically. Only pull them in when the user's request requires the specific capability.
-
-| Resource | When to Load |
-|---|---|
-| `references/trend-intelligence.md` | User has NO topic and needs trend discovery |
-| `references/feedback-loop.md` | User wants to track engagement or improve over time |
-| `references/cross-platform-adaptation.md` | User wants ONE piece adapted to multiple platforms |
-
-
-## 🔗 Part of the Custom Skills Ecosystem
-
-This skill is part of the **[custom-skills](https://github.com/aaaronmiller/custom-skills)** aggregate — 50+ production-ready skills for Claude Code, Codex, Hermes, and other CLI agents.
-
-### Related Skills in the Collection
-
-| Skill | Why It Pairs Well |
-|---|---|
-| [deliberative-refinement](https://github.com/aaaronmiller/custom-skills/tree/main/deliberative-refinement) | Multi-round adversarial self-critique — the engine behind the refinement loop |
-| [humanize-writing](https://github.com/aaaronmiller/custom-skills/tree/main/humanize-writing) | Post-pass voice polishing — removes AI tells after viral optimization |
-| [frontend-design-masterclass](https://github.com/aaaronmiller/custom-skills/tree/main/frontend-design-masterclass) | Premium UI/UX for landing pages that convert |
-| [security-audit](https://github.com/aaaronmiller/custom-skills/tree/main/security-audit) | Vulnerability assessment for shipped artifacts |
-| [goal-loop](https://github.com/aaaronmiller/custom-skills/tree/main/goal-loop) | Iterative task completion with quality gates |
-
-### Install the Full Collection
-
-```bash
-git clone https://github.com/aaaronmiller/custom-skills.git
-cp -r custom-skills/* ~/.claude/skills/
+Email before noon is self-sabotage. I tested it for 3 weeks: no inbox
+until 2pm. My deep-work hours went from 2 to 4+. That 7:47am Slack ping?
+Not your fire. Morning brain builds. Afternoon brain reacts. Flip the
+order and you stop playing defense. Two inbox windows, 2pm and 5pm,
+handle everything that matters.
 ```
 
-📦 **Repository**: https://github.com/aaaronmiller/custom-skills
+What changed: enthusiasm, transition and list-scaffold tells removed;
+engagement bait replaced by a statement; real numbers added (3 weeks, 2 to
+4+ hours, 7:47am); sentence length varied from 3 to 12 words; conviction
+opener instead of an announcement.
+
+## Reference files
+
+Load only what the current step needs.
+
+| File | Contents | Load when |
+|---|---|---|
+| `references/platform-updates-2026.md` | Dated 2026 ranking, anti-AI and disclosure changes with sources | Steps 2 and 8, always for public posts |
+| `references/ai-tells.md` | 100+ tells: current-model table, classic tells, platform, video and thumbnail tells | Step 5 |
+| `references/platform-templates.md` | Templates and examples for 8 platforms | Step 4 |
+| `references/refinement-protocol.md` | Adversarial passes for text and thumbnails | Step 6 |
+| `references/viral-titles.md` | Title psychology, formulas and scoring | Titles |
+| `references/title-formulas.md` | 50+ title formulas with examples | Titles |
+| `references/viral-thumbnails.md` | Thumbnail psychology, design and AI prompts | Thumbnails |
+| `references/thumbnail-checklist.md` | Quick thumbnail checklist | Thumbnails |
+| `references/research-statistics.md` | Research data, including 2026 studies that supersede older rules | Justifying a choice |
+| `references/humanize-integration.md` | Handing off to the humanize-writing skill | Step 5 voice pass |
+| `references/cross-platform-adaptation.md` | One piece adapted to several platforms | Multi-platform requests |
+| `references/trend-intelligence.md` | Finding a topic when the user has none | No topic given |
+| `references/feedback-loop.md` | Tracking engagement over time | User wants to learn from results |

@@ -1,5 +1,16 @@
 # Humanize-Writing Integration Guide
 
+## Contents
+
+- [Integration with **Deliberative Refinement** allows for rigorous checking associated with human-like writing qualities. invoked during the final pass to eliminate AI tells while preserving viral mechanics.](#integration-with-deliberative-refinement-allows-for-rigorous-checking-associated-with-human-like-writing-qualities-invoked-during-the-final-pass-to-eliminate-ai-tells-while-preserving-viral-mechanics)
+- [Platform Calibration Matrix](#platform-calibration-matrix)
+- [Mapping to Humanize-Writing Phases](#mapping-to-humanize-writing-phases)
+- [Video Script Humanization](#video-script-humanization)
+- [TikTok/Reels Humanization](#tiktokreels-humanization)
+- [When Humanize-Writing Is Unavailable](#when-humanize-writing-is-unavailable)
+- [Technical Notes](#technical-notes)
+- [Quick Reference: Humanization by Content Type](#quick-reference-humanization-by-content-type)
+
 This resource documents how the Deliberative Refinement skill integrates with the humanize-writing skill for final content polish.
 
 ## Integration with **Deliberative Refinement** allows for rigorous checking associated with human-like writing qualities. invoked during the final pass to eliminate AI tells while preserving viral mechanics.

@@ -1,161 +1,99 @@
-# Viral Content Deliberative Refinement - Complete Package
+# create-viral-content
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/aaaronmiller/create-viral-content?style=for-the-badge&color=f59e0b" alt="Stars">
-  <img src="https://img.shields.io/badge/Claude%20Code-Skill-8b5cf6?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skill">
-  <img src="https://img.shields.io/badge/Platforms-Reddit%20%C2%B7%20X%20%C2%B7%20LinkedIn%20%C2%B7%20TikTok-0ea5e9?style=for-the-badge" alt="Platforms">
+  <img src="https://img.shields.io/badge/Agent%20Skill-v3.0.0-8b5cf6?style=for-the-badge" alt="Agent Skill v3.0.0">
+  <img src="https://img.shields.io/badge/Platforms-Reddit%20%C2%B7%20X%20%C2%B7%20LinkedIn%20%C2%B7%20YouTube%20%C2%B7%20TikTok-0ea5e9?style=for-the-badge" alt="Platforms">
 </p>
 
+An Agent Skill that turns a draft or a brief into social content that spreads
+and reads as written by a person with a point of view. It covers hooks,
+platform rules, titles and thumbnails, AI-tell removal, adversarial
+refinement and AI-disclosure rules, updated for the platform changes of
+June to November 2026.
 
-Transform complex ideas into content that spreads. This skill codifies the refinement process that separates forgettable posts from ones that generate discussion, shares, and action.
+## Install
 
-## What You're Getting
+The skill is a folder named `create-viral-content` containing `SKILL.md` and
+`references/`. Every platform below needs the folder name to stay exactly
+`create-viral-content`.
 
-A production-ready system for creating viral social content across all major platforms, with integrated AI tell detection and humanization.
+**claude.ai (web and desktop).** Download `create-viral-content.zip` from the
+[latest release](https://github.com/aaaronmiller/create-viral-content/releases/latest)
+and upload it under Settings, Capabilities, Skills. Do not upload GitHub's
+"Download ZIP" archive: it wraps the files in `create-viral-content-main/`,
+and the folder name must match the skill name.
 
----
+**Claude Code.**
+```bash
+git clone https://github.com/aaaronmiller/create-viral-content ~/.claude/skills/create-viral-content
+```
 
-## File Manifest
+**Codex, Gemini CLI, opencode, Qwen Code, Cursor, Kilo** (shared user-level
+skills folder):
+```bash
+git clone https://github.com/aaaronmiller/create-viral-content ~/.agents/skills/create-viral-content
+```
 
-### Core Files
+**Antigravity:** clone into `~/.gemini/config/skills/create-viral-content`.
 
-| File | Size | Purpose |
-|------|------|---------|
-| SKILL.md | ~11 KB | Complete viral content framework |
-| README.md | This file | Package overview |
-| marketplace.json | ~1 KB | Anthropic marketplace manifest |
-| VALIDATION-REPORT.md | ~15 KB | 10-persona adversarial validation |
+**Claude API and OpenAI API:** upload the release zip as a skill bundle.
 
-### References (`references/` folder)
+## Use
+
+```
+Write a LinkedIn post about [topic]. I ran [experiment] for [time] and
+[result]. Audience: [who].
+```
+
+```
+Give me 10 YouTube title and thumbnail-text variants for a video about
+[topic]. The video shows [what it delivers].
+```
+
+The skill runs an eight-step workflow: pin the brief and the author's own
+stake, check platform rules, draft hooks, draft the body, remove AI tells,
+run five refinement passes, package variants, and check disclosure.
+
+## Files
 
 | File | Purpose |
-|------|---------|
-| ai-tells.md | Comprehensive AI detection guide with human alternatives |
-| platform-templates.md | Platform-specific templates (Reddit, LinkedIn, Twitter, YouTube, TikTok, Email) |
-| refinement-protocol.md | Adversarial refinement passes for text and thumbnails |
-| humanize-integration.md | Integration with humanize-writing skill |
-| viral-titles.md | Title psychology, formulas, and scoring |
-| viral-thumbnails.md | Thumbnail design psychology and checklist |
-| **NEW** research-statistics.md | Consolidated data from 40 research sources |
-| **NEW** title-formulas.md | 50+ title formulas with examples |
-| **NEW** thumbnail-checklist.md | Quick-reference thumbnail design checklist |
+|---|---|
+| `SKILL.md` | Workflow, platform rules, hooks, titles, top AI tells, ethics and disclosure |
+| `references/platform-updates-2026.md` | Dated 2026 ranking, anti-AI and disclosure changes with sources |
+| `references/ai-tells.md` | 100+ AI tells, including current-model tells (2026) |
+| `references/platform-templates.md` | Templates for Reddit, X, LinkedIn, YouTube, TikTok, Instagram, email |
+| `references/refinement-protocol.md` | Adversarial passes for text and thumbnails |
+| `references/viral-titles.md`, `references/title-formulas.md` | Title psychology and 50+ formulas |
+| `references/viral-thumbnails.md`, `references/thumbnail-checklist.md` | Thumbnail design and checklist |
+| `references/research-statistics.md` | Research data, with 2026 studies that supersede older rules |
+| `references/humanize-integration.md` | Hand-off to the humanize-writing skill |
+| `references/cross-platform-adaptation.md` | One piece across several platforms |
+| `references/trend-intelligence.md` | Finding a topic when you have none |
+| `references/feedback-loop.md` | Tracking results over time |
+| `CHANGELOG.md` | Version history |
+| `marketplace.json` | Marketplace manifest |
 
----
+## Optional companion
 
-## Quick Start
+[humanize-writing](https://github.com/aaaronmiller/custom-skills/tree/main/humanize-writing)
+adds a voice-polish pass. Without it, the skill uses its built-in checklist.
 
-### Installation
+## Ethics
 
-**Claude Code:**
-```bash
-/plugin install viral-content-forge
-```
+Use it to sharpen your own ideas. It refuses astroturfing, misinformation,
+impersonation, fake reviews and invented personal experiences, and it tells
+you which AI-disclosure rule applies (including EU AI Act Article 50 for
+public-interest content from 2026-08-02).
 
-**Claude.ai:**
-1. Create new Project
-2. Upload `SKILL.md` to Project Knowledge
-3. Optionally add reference files
-
-### Basic Usage
-
-```
-Create a viral Reddit post about [TOPIC].
-Platform: r/MachineLearning
-Target: technical audience who appreciates practical insights
-```
-
----
-
-## Integration with humanize-writing Skill
-
-This skill integrates with the **humanize-writing** skill for the final polish pass. When both skills are installed, viral-content-forge automatically invokes humanize-writing to:
-
-- Remove AI vocabulary tells
-- Ensure natural sentence rhythm
-- Maintain viral hooks while sounding human
-
-### Manual Fallback
-
-If humanize-writing is unavailable, the skill includes a built-in humanization checklist.
-
----
-
-## Key Features
-
-### Hook Architecture
-- Prediction + Stakes patterns
-- Tribal Identity Split patterns
-- Before/After Compression patterns
-
-### Platform Optimization
-- Reddit (subreddit-specific calibration)
-- Twitter/X threads
-- LinkedIn posts
-- YouTube comments
-- Hacker News
-
-### AI Tell Detection
-- 100+ AI tells with replacements (text, video, thumbnail)
-- Platform-specific tells (TikTok, LinkedIn, Reddit, Email)
-- Video script tells
-- Thumbnail text tells
-
-### Refinement Protocol
-Six adversarial passes:
-1. The Skeptic
-2. The Expert
-3. The Scroller
-4. The Competitor
-5. The Editor
-6. **NEW** Thumbnail-specific passes
-
-### Research Basis
-40 documented sources including:
-- BuzzSumo (100M headlines)
-- Netflix thumbnail personalization
-- Outbrain negative superlatives study
-- Academic viral content research
-
----
-
-## Examples
-
-**Before (AI-generated):**
-> I'm excited to share a revolutionary new approach to prompt engineering. Here's the thing: traditional single-pass prompting is limited...
-
-**After (humanized viral):**
-> I think deliberative refinement is the 2026 prompt technique that matters most. The core idea: you don't ask AI for an answer—you make it defend one...
-
----
-
-## Ethical Framework
-
-✅ **Do:** Polish your own ideas, convert expertise to accessible content, learn viral mechanics
-
-❌ **Don't:** Astroturf, spread misinformation, impersonate others, engagement farm without substance
-
----
-
-## Version & Compatibility
+## Version
 
 | Field | Value |
-|-------|-------|
-| Version | 2.0.0 |
-| Created | December 2025 |
-| Updated | December 2025 |
-| Author | Ice-ninja |
+|---|---|
+| Version | 3.0.0 |
+| Updated | 2026-11-10 |
+| Author | ice-ninja |
 | License | MIT |
-| Compatibility | Claude.ai, Claude Code, Claude API |
-| Research Sources | 40 documented |
+| Format | Agent Skills (SKILL.md with name, description, license, metadata) |
 
----
-
-## Dependencies
-
-- **Optional:** humanize-writing skill (for enhanced humanization pass)
-
----
-
-## Support
-
-For issues or feature requests, open an issue on the GitHub repository.
+Issues and suggestions: open an issue on this repository.

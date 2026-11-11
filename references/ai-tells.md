@@ -1,5 +1,26 @@
 # AI Tells: Complete Detection Guide
 
+## Contents
+
+- [Transition Phrases](#transition-phrases)
+- [Enthusiasm Tells](#enthusiasm-tells)
+- [Structure Tells](#structure-tells)
+- [Corporate Speak](#corporate-speak)
+- [Engagement Bait](#engagement-bait)
+- [Hedging Patterns](#hedging-patterns)
+- [Filler Phrases](#filler-phrases)
+- [Meta-Commentary](#meta-commentary)
+- [Emoji Overuse](#emoji-overuse)
+- [The "Sounds Smart" Trap](#the-sounds-smart-trap)
+- [Detection Heuristic](#detection-heuristic)
+- [Humanization Checklist](#humanization-checklist)
+- [Platform-Specific AI Tells](#platform-specific-ai-tells)
+- [Video Script AI Tells](#video-script-ai-tells)
+- [Thumbnail Text Tells](#thumbnail-text-tells)
+- [The Complete Detection Heuristic](#the-complete-detection-heuristic)
+- [Current-Model Tells (2026)](#current-model-tells-2026)
+- [Punctuation Antipatterns (2024-2025)](#punctuation-antipatterns-2024-2025)
+
 This reference catalogs patterns that signal AI-generated content. Use during the humanization pass to hunt and eliminate.
 
 ## Transition Phrases
@@ -277,11 +298,52 @@ Before publishing, verify:
 
 ---
 
+## Current-Model Tells (2026)
+
+Models released in 2026 suppressed the famous tells. Score clusters of
+these, never a single hit, and re-check every quarter: each model release
+retires old tells and adds new ones.
+
+| Tell | Pattern | Source |
+|---|---|---|
+| Importance flagging | "this matters" (116x human rate), "why X matters", "matters most" | Graphite, 2026-10-01 |
+| "More than" contrast | "is more than a X, it...", "rather than simply", "not only about", "instead, it" | Graphite, 2026-10-01 |
+| Corrective framing | "should be treated as A rather than as B"; rose around July 2026 | Wikipedia Signs of AI writing, Oct 2026 |
+| Forward-looking transitions | "looking ahead", "adds another layer", "what comes next", "in practice" | Graphite, 2026-10-01 |
+| Steady-virtue adjectives | "dependable", "steady", "thoughtful", "meaningful", "quietly", "multifaceted" | Graphite; Wikipedia |
+| Helpfulness language | "is especially helpful", "can help you", "makes it easier", "helps you avoid" | Graphite, 2026-10-01 |
+| Stacked superlatives | "perhaps the most", "one of the best X about" | Graphite, 2026-10-01 |
+| Over-hedging | "does not establish", "may provide", "not necessarily" | Graphite, 2026-10-01 |
+| Emphatic intensifiers | "is genuinely", "matters enormously", "remarkably" | Graphite, 2026-10-01 |
+| Vague connection | "associated with", "in connection with" | Wikipedia, Oct 2026 |
+| "-ing" analysis tails | "..., highlighting...", "..., emphasizing..." | Wikipedia, Oct 2026 |
+| Uniform short sentences | runs of 8-20-word sentences with little variation | Wikipedia, Oct 2026 |
+| Leftover placeholders | "(Add your URL here)", "2025-XX-XX", "Delete this section" | Wikipedia, 2026 |
+| Formatting residue | markdown asterisks in comments, emoji-prefixed headers, Title Case headings | Wikipedia, Oct 2026 |
+| Reply defensiveness | "If there are specific issues, please point them out", customer-service apologies | Wikipedia WP:AICOMMENT |
+| Blog scaffolding | "Conclusion" header, "In today's fast-paced digital landscape", "Let's take a look" | Search Engine Land via PRSA, Apr 2026 |
+| Polished but perspective-free | fluent text with no stance, lived detail or specific fact | LinkedIn slop classifiers, 2026-07-30 |
+
+**Em dash: downweight.** Graphite measured a 99% drop in em-dash use in
+Opus 5.5, and GPT-6 Astra uses fewer than humans. Wikipedia now dates
+em-dash overuse as a 2022 to September 2026 sign. A missing em dash is not
+evidence of human authorship; heavy use mainly flags older models.
+
+**False positive to avoid:** polished non-native or machine-translated prose
+now gets flagged by Reddit moderators. Keep the author's own idiom rather
+than smoothing it.
+
+Sources: https://graphite.io/five-percent/research/ai-tells-opus-5-5-update ;
+https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing ;
+https://www.prsa.org/article/which-signs-of-ai-writing-disengage-people-most-APRIL26
+
 ## Punctuation Antipatterns (2024-2025)
 
 > **Research basis:** Cambridge University 2024, Originality.ai detection data. For the full comprehensive list, see the **humanize-writing** skill's `references/ai-vocabulary-list.md`.
 
 ### Em-Dash Overuse
+
+> Historical as of late 2026: current models rarely use em dashes. See "Current-Model Tells (2026)".
 AI (especially ChatGPT) overuses long dashes — like this — to add dramatic pauses.
 - **Threshold:** Max 1 per 500 words
 - **Fix:** Use commas or restructure

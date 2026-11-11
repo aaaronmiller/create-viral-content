@@ -1,5 +1,17 @@
 # Refinement Protocol
 
+## Contents
+
+- [The Five-Pass Protocol](#the-five-pass-protocol)
+- [Protocol Execution](#protocol-execution)
+- [Pass Sequencing](#pass-sequencing)
+- [Common Failure Modes](#common-failure-modes)
+- [Stopping Criteria](#stopping-criteria)
+- [Thumbnail Refinement Protocol](#thumbnail-refinement-protocol)
+- [Title A/B Testing Protocol](#title-ab-testing-protocol)
+- [Scoring Thresholds](#scoring-thresholds)
+- [Research-Backed Thresholds](#research-backed-thresholds)
+
 The difference between forgettable content and viral content is the number of adversarial passes.
 
 ## The Five-Pass Protocol

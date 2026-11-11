@@ -1,5 +1,19 @@
 # Platform Templates and Examples
 
+## Contents
+
+- [Reddit Post Templates](#reddit-post-templates)
+- [YouTube Comment Template](#youtube-comment-template)
+- [Twitter/X Thread Template](#twitterx-thread-template)
+- [LinkedIn Post Template](#linkedin-post-template)
+- [Hook Patterns with Examples](#hook-patterns-with-examples)
+- [TL;DR Formulas](#tldr-formulas)
+- [TikTok Hook Templates](#tiktok-hook-templates)
+- [Instagram Reels Templates](#instagram-reels-templates)
+- [Email Subject Line Templates](#email-subject-line-templates)
+- [Platform Length Guidelines](#platform-length-guidelines)
+- [A/B Testing Templates](#ab-testing-templates)
+
 ## Reddit Post Templates
 
 ### The Hot Take

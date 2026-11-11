@@ -1,13 +1,13 @@
 {
     "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
     "name": "create-viral-content",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "description": "Transform technical concepts into viral social content with integrated humanization. Creates Reddit posts, Twitter threads, LinkedIn content, YouTube comments, and more with viral mechanics that spread.",
     "author": "Ice-ninja",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ice-ninja/skills"
+        "url": "https://github.com/aaaronmiller/create-viral-content"
     },
     "keywords": [
         "viral-content",
@@ -38,9 +38,14 @@
     },
     "resources": [
         {
+            "name": "platform-updates-2026",
+            "source": "./references/platform-updates-2026.md",
+            "description": "Dated 2026 ranking, anti-AI and disclosure changes"
+        },
+        {
             "name": "ai-tells",
             "source": "./references/ai-tells.md",
-            "description": "AI detection guide with human alternatives"
+            "description": "AI-tell catalog including current-model tells"
         },
         {
             "name": "platform-templates",

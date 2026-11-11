@@ -1,5 +1,13 @@
 # Engagement Feedback Loop & Self-Improvement
 
+## Contents
+
+- [Storage Convention](#storage-convention)
+- [When to Run the Feedback Loop](#when-to-run-the-feedback-loop)
+- [Engagement Scoring](#engagement-scoring)
+- [Self-Improvement Analysis](#self-improvement-analysis)
+- [Quick-Start: First-Time Setup](#quick-start-first-time-setup)
+
 > **Progressive Disclosure:** This module activates AFTER content has been published. It requires a local tracking file to function. If no tracking file exists, this module can be skipped.
 
 ## Storage Convention

@@ -1,5 +1,13 @@
 # Cross-Platform Adaptation Framework
 
+## Contents
+
+- [The Topology Question: Star vs Mesh](#the-topology-question-star-vs-mesh)
+- [Cross-Linking Rules (Mesh Topology)](#cross-linking-rules-mesh-topology)
+- [Platform Adaptation Patterns](#platform-adaptation-patterns)
+- [The Content Waterfall (Star Topology)](#the-content-waterfall-star-topology)
+- [Cross-Platform Voice Calibration](#cross-platform-voice-calibration)
+
 > **Progressive Disclosure:** Use this module when the user wants ONE piece of content adapted to multiple platforms. If they only need one platform, skip this entirely.
 
 ## The Topology Question: Star vs Mesh

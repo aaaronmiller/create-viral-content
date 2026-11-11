@@ -1,5 +1,19 @@
 # Viral Thumbnail Mastery
 
+## Contents
+
+- [Part 1: The Psychology of Thumbnails](#part-1-the-psychology-of-thumbnails)
+- [Part 2: Core Thumbnail Elements](#part-2-core-thumbnail-elements)
+- [Part 3: The MrBeast Thumbnail Method](#part-3-the-mrbeast-thumbnail-method)
+- [Part 4: Thumbnail Creation Protocol](#part-4-thumbnail-creation-protocol)
+- [Part 5: AI Thumbnail Prompt Templates](#part-5-ai-thumbnail-prompt-templates)
+- [Part 6: Technical Specifications](#part-6-technical-specifications)
+- [Part 7: Platform Adaptations](#part-7-platform-adaptations)
+- [Part 8: Common Mistakes](#part-8-common-mistakes)
+- [Part 9: Thumbnail Scoring Checklist](#part-9-thumbnail-scoring-checklist)
+- [Part 10: Advanced Research Findings](#part-10-advanced-research-findings)
+- [Sources and Research Basis](#sources-and-research-basis)
+
 > ⚠️ **CRITICAL SECTION:** Thumbnails are responsible for 70%+ of video performance variability. This reference is mandatory reading before any thumbnail creation.
 
 Thumbnails are visual hooks. Viewers make click decisions in under 0.5 seconds. The thumbnail must convey emotion, hint at content, and compel action—all at a glance.
@@ -34,7 +48,7 @@ Humans have dedicated facial recognition neurology. Faces in thumbnails trigger 
 - Viewers mirror emotions subconsciously
 
 **Expression hierarchy (effectiveness):**
-1. **Shock/Surprise** — widened eyes, open mouth (highest CTR)
+1. **Shock/Surprise** — widened eyes, open mouth (older guidance; 2026 studies find neutral faces dominate breakouts and only 5-11% shocked)
 2. **Excitement** — genuine smile, raised eyebrows
 3. **Curiosity** — furrowed brow, questioning look
 4. **Fear/Worry** — creates "what happened?" curiosity

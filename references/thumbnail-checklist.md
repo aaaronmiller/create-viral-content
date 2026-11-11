@@ -1,5 +1,17 @@
 # Thumbnail Design Checklist
 
+## Contents
+
+- [Pre-Production Planning](#pre-production-planning)
+- [Design Checklist](#design-checklist)
+- [Mobile Test Checklist](#mobile-test-checklist)
+- [Platform Specifications](#platform-specifications)
+- [Title Synergy Check](#title-synergy-check)
+- [A/B Testing Checklist](#ab-testing-checklist)
+- [Anti-Pattern Checklist](#anti-pattern-checklist)
+- [Scoring (Target: 20+)](#scoring-target-20)
+- [Quick Reference: High-CTR Elements](#quick-reference-high-ctr-elements)
+
 > Quick-reference checklist for creating high-CTR thumbnails across platforms.
 
 ---
@@ -15,7 +27,7 @@
 
 ### Shot List for Thumbnail Capture
 - [ ] 10+ intentional thumbnail moments during filming
-- [ ] Multiple expressions (shock, surprise, excitement, curiosity)
+- [ ] Expression matches the promise (2026 data: neutral or calm faces dominate breakouts; shocked faces are about 5-11%)
 - [ ] Different angles (close-up, medium, wide)
 - [ ] Various compositions (left, center, right positioning)
 - [ ] Clean background options
@@ -157,7 +169,7 @@
 ## Quick Reference: High-CTR Elements
 
 ### Expression Hierarchy (Effectiveness)
-1. **Shock/Surprise** — widened eyes, open mouth (highest CTR)
+1. **Shock/Surprise** — widened eyes, open mouth (older guidance; 2026 studies find only 5-11% of breakout thumbnails use it)
 2. **Excitement** — genuine smile, raised eyebrows
 3. **Curiosity** — furrowed brow, questioning look
 4. **Fear/Worry** — creates "what happened?" curiosity

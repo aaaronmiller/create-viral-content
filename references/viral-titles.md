@@ -8,6 +8,18 @@ tags: [viral, titles, headlines, CTR, psychology, formulas]
 
 # Viral Title Mastery
 
+## Contents
+
+- [Part 1: The Psychology of Viral Titles](#part-1-the-psychology-of-viral-titles)
+- [Part 2: Title Formulas by Platform](#part-2-title-formulas-by-platform)
+- [Part 3: The Title Generation Protocol](#part-3-the-title-generation-protocol)
+- [Part 4: Title Types and Templates](#part-4-title-types-and-templates)
+- [Part 5: Platform-Specific Metrics](#part-5-platform-specific-metrics)
+- [Part 6: Testing and Iteration](#part-6-testing-and-iteration)
+- [Part 7: Anti-Patterns to Avoid](#part-7-anti-patterns-to-avoid)
+- [Part 8: Advanced Research Findings](#part-8-advanced-research-findings)
+- [Sources and Research Basis](#sources-and-research-basis)
+
 > ⚠️ **CRITICAL SECTION:** Titles determine 70% of content performance. This reference is mandatory reading before any title generation.
 
 The title is the single most important element of viral content. Studies show users vote on Reddit posts without reading the linked content, click YouTube videos based solely on thumbnail+title, and scroll past articles that fail to hook in 0.3 seconds.
@@ -372,7 +384,7 @@ The [Hidden] Danger of [Common Practice]
 ### Key Statistics from 20 Documented Sources
 
 **Headline Performance Data:**
-- Ideal headline length: **11 words / 65 characters** (BuzzSumo 100M study)
+- Ideal headline length: **11 words / 65 characters** (BuzzSumo 100M study, text headlines; 2026 YouTube data favours longer specific titles, see research-statistics.md)
 - Numbers boost engagement: **10 is the magic number**, followed by 3-7
 - Negative superlatives outperform positive by **63%** (Outbrain study)
 - Question headlines: 23% higher share rate than statements

@@ -1,13 +1,61 @@
 # Research Statistics Reference
 
+## Contents
+
+- [2026 Updates](#2026-updates)
+- [Title Performance Metrics](#title-performance-metrics)
+- [Thumbnail CTR Statistics](#thumbnail-ctr-statistics)
+- [Platform Benchmarks](#platform-benchmarks)
+- [A/B Testing Impact](#ab-testing-impact)
+- [Platform-Specific Metrics](#platform-specific-metrics)
+- [Visual Processing Speed](#visual-processing-speed)
+- [Key Formulas](#key-formulas)
+
 > Consolidated data-backed statistics from 40 documented sources for viral content optimization.
 
 ---
 
+## 2026 Updates
+
+These studies supersede older rules in this file where they conflict.
+Observational, mostly vendor data; treat as direction, not law.
+
+### YouTube packaging
+
+- **Eden, 507,478 videos** (2026-08-21): breakout rate rose with title
+  length (under 30 chars 26.1%, 45-59 chars 33.9%, over 75 chars 35.9%).
+  4-6 words of thumbnail text gave the clearest edge; only 6.3% of breakout
+  thumbnails repeat the title; colour and saturation made no measurable
+  difference. https://eden.so/blog/what-makes-a-good-youtube-thumbnail/
+- **vidIQ, 500 breakout videos** (2026-07-08): faces in 69% overall and 80%
+  of the top 50; median 5 words of overlay text; only 5% used an exaggerated
+  expression. https://vidiq.com/research/youtube-thumbnail-study/
+- **Thumbnail Bench, 11,223 thumbnails** (2026-09-17): most common
+  expression neutral (35%); shocked 11%; median 4 words, 23% wordless.
+- **YouTube A/B tests** pick winners by watch time, not CTR.
+
+Rules now: calm or neutral face, about 4-6 words that add to the title,
+titles may run 60+ characters when specific. The older "shocked face" and
+"11 words / 65 characters" rules describe text headlines from earlier eras.
+
+### LinkedIn
+
+- **MagicPost, 687k posts** (2026-10-06): keyword-comment CTAs -47%; links
+  -16% to -21%; polls -22% against photos; posting hour ±2% on final reach.
+  https://magicpost.in/studies/linkedin-algorithm-changes
+
+### Search and email
+
+- **Zero-click** [LOW]: 68% of US Google searches ended without a click
+  (Jan-Apr 2026); headlines must work as a standalone answer.
+- **Cold email** [LOW]: personalized subjects 20.79% opens vs 14.96%
+  generic (Snov.io, 10M+ emails); judge tests on replies once AI inbox
+  summaries spread.
+
 ## Title Performance Metrics
 
 ### Headline Length (BuzzSumo 100M Headlines Study)
-- **Optimal length:** 11 words / 65 characters
+- **Optimal length:** 11 words / 65 characters (text headlines, older data; for YouTube titles see 2026 Updates: longer specific titles break out more)
 - Headlines need specificity over brevity
 - Too short (6 words) underperforms
 
