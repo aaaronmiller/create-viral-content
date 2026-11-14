@@ -1,7 +1,6 @@
 ---
 title: Viral Title Reference
 date: 2025-12-25
-version: 1.0.0
 author: ice-ninja
 tags: [viral, titles, headlines, CTR, psychology, formulas]
 ---

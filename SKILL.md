@@ -1,6 +1,6 @@
 ---
 name: create-viral-content
-description: "Create and refine viral social content: Reddit posts, X threads, LinkedIn posts, YouTube titles and thumbnails, TikTok and Reels scripts, Instagram carousels, Threads and Bluesky posts, email subject lines and blog headlines. Use when the user wants content to spread, earn engagement, or read as human to a skeptical audience, and whenever drafting any public-facing post, hook, title or caption even if the word viral never appears. Triggers: 'make this viral', 'social media post', 'catchy headline', 'hook', 'title ideas', 'thumbnail', 'engagement', 'shareable', 'go viral', 'attention-grabbing', 'scroll-stopping', 'hot take', 'more engaging', 'subreddit', 'thread', 'sounds like AI', 'AI slop'. Covers 2026 platform ranking changes, current AI-tell removal and AI-disclosure rules."
+description: "Writes and sharpens social posts, threads, titles, hooks and scripts so they spread and read as human. Use for any public-facing post, title or caption."
 license: MIT
 metadata:
   description-reviewed: "2026-11-10"
