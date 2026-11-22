@@ -8,6 +8,8 @@ metadata:
   version: "3.0.0"
   updated: "2026-11-10"
   tags: "social, writing, marketing, ai-tells"
+tags:
+  - DOMAIN
 ---
 
 # Create Viral Content
